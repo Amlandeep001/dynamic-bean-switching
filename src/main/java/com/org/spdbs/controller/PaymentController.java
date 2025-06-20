@@ -34,10 +34,10 @@ public class PaymentController
 	@PostMapping("/pay")
 	public String pay(@RequestBody PaymentRequest paymentRequest)
 	{
-		String amount = paymentRequest.getAmount();
-		String paymentType = paymentRequest.getPaymentType();
-		String sender = paymentRequest.getSender();
-		String receiver = paymentRequest.getReceiver();
+		final String amount = paymentRequest.getAmount();
+		final String paymentType = paymentRequest.getPaymentType();
+		final String sender = paymentRequest.getSender();
+		final String receiver = paymentRequest.getReceiver();
 
 		return switch(paymentType.toLowerCase())
 		{

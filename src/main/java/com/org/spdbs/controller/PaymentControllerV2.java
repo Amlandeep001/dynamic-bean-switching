@@ -31,7 +31,7 @@ public class PaymentControllerV2
 	@PostMapping("/pay/v2")
 	public String pay(@RequestBody PaymentRequest paymentRequest)
 	{
-		String paymentType = paymentRequest.getPaymentType().toLowerCase();
+		final String paymentType = paymentRequest.getPaymentType().toLowerCase();
 
 		PaymentService service = paymentServicesMap.get(paymentType);
 
